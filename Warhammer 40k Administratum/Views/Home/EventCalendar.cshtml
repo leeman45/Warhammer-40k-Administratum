@@ -1,20 +1,121 @@
 ﻿@{
-    ViewData["Title"] = "Event Calendar";
+    ViewData["Title"] = "Find Events in your Area!";
 }
-<h1>@ViewData["Title"]</h1>
+<h1 id="title">@ViewData["Title"]</h1>
 
 
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>EventCalendar</title>
+    <title>Event Calendar</title>
+    <style>
+        #event_details{
+            border: groove
+        }
+        #title{
+            text-align: center;
+            margin-bottom: 5%;
+        }
+        #weekly_event {
+            text-align: center;
+        }
+        .row{
+            margin-bottom: 5%;
+        }
+        button{
+            margin:0 auto;
+            display: block;
+        }
+        tr{
+            border: 2px solid black;
+        }
+        td {
+            border: 1px solid grey;
+            height: 100px;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
         <div class="row">
-            <h1>Find Events in your Area!</h1>
-            <div class="col-lg-5">
+            <div class="col">
                 <h6>Event Calendar</h6>
-                <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.5.1/moment.min.js"></script>
+                <img class="card-img-top img-fluid" src="https://cdn.discordapp.com/attachments/502668067873226754/782816654501216266/unknown.png" alt="Calendar" style="width:350px;height:350px;" />
+                <div class="row">
+                    <h6>Postal Code: </h6>
+                    <input />
+                </div>
+            </div>
+            <div class="col">
+                <div class="container" id="event_details">
+                    <h6>Local Tournament</h6>
+                    <div class="card">
+                        <table style="width:350px;height:350px;">
+                            <tr>
+                                <td>Address: </td>
+                                <td>1234 Lolipop Drive</td>
+                            </tr>
+                            <tr>
+                                <td>Date/Time: </td>
+                                <td>Novemeber 29 2020 12pm-7pm</td>
+                            </tr>
+                            <tr>
+                                <td>Event Details: </td>
+                                <td>Local tournament being held at hobby store</td>
+                            </tr>
+                        </table>
+
+                    </div>
+                    <button width="60" align="center">Join/RSVP Event</button>
+                </div>
+
+
+            </div>
+            <div class="col">
+                <img class="card-img-top img-fluid" src="https://cdn.discordapp.com/attachments/502668067873226754/782823523965337610/unknown.png" alt="Map" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="container">
+                <h6 id="weekly_event">Weekly Event Calendar</h6>
+                <table style="width: 100%">
+                    <colgroup>
+                        <col span="1" style="width: 14%;" />
+                        <col span="1" style="width: 14%;" />
+                        <col span="1" style="width: 14%;" />
+                        <col span="1" style="width: 14%;" />
+                        <col span="1" style="width: 14%;" />
+                        <col span="1" style="width: 14%;" />
+                        <col span="1" style="width: 14%;" />
+                    </colgroup>
+                    <tr id="week_header" style="border: 1px thick; background-color: darkgray">
+                        <th>Sunday</th>
+                        <th>Monday</th>
+                        <th>Tuesday</th>
+                        <th>Wednesday</th>
+                        <th>Thursday</th>
+                        <th>Friday</th>
+                        <th>Saturday</th>
+                    </tr>
+                    <tr>
+                        <td>Local Tournament</td>
+                        <td>Learn how to paint</td>
+                        <td>Learn how to build</td>
+                        <td>Tournment Finals</td>
+                        <td></td>
+                        <td></td>
+                        <td>Buy one Get one</td>
+                    </tr>
+                    <tr>
+                        <td>12pm - 7pm</td>
+                        <td>11am - 2pm</td>
+                        <td>9am - 12pm</td>
+                        <td>All Day</td>
+                        <td></td>
+                        <td></td>
+                        <td>All Day</td>
+                    </tr>
+                </table>
             </div>
         </div>
     </div>

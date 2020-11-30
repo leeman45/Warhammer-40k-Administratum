@@ -38,6 +38,11 @@ namespace Warhammer_40k_Administratum.Controllers
             return View();
         }
 
+        public IActionResult AddShopItem()
+        {
+            return View();
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

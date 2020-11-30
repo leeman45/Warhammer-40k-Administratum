@@ -23,7 +23,7 @@ namespace Warhammer_40k_Administratum.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult ShopPageItem()
         {
             return View();
         }

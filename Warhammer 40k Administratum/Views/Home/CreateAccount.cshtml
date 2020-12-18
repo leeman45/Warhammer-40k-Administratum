@@ -1,10 +1,11 @@
-﻿@{
+﻿@model Warhammer_40k_Administratum.Models.User
+@{
     ViewData["Title"] = "Create Account";
 }
     <div class="text-center">
         <div class="m-5 border border-warning rounded">
             <h1 class="mt-3">Register</h1>
-            <form method="post" asp-action="RegisterForm">
+            <form method="post" asp-action="CreateAccount">
                 <div asp-validation-summary="All"></div>
 
                 <input type="hidden" asp-for="Id" />
@@ -16,15 +17,15 @@
                     </div>
                 </div>
                 <div class="form-group row px-5 mx-5">
-                    <label asp-for="Password" class="col-sm-2 col-form-label">Password:</label>
-                    <div class="col-sm-10">
-                        <input type="text" class="form-control" asp-for="Password" placeholder="Password" />
-                    </div>
-                </div>
-                <div class="form-group row px-5 mx-5">
                     <label asp-for="Username" class="col-sm-2 col-form-label">Name:</label>
                     <div class="col-sm-10">
                         <input type="text" class="form-control" asp-for="Username" placeholder="Name" />
+                    </div>
+                </div>
+                <div class="form-group row px-5 mx-5">
+                    <label asp-for="Password" class="col-sm-2 col-form-label">Password:</label>
+                    <div class="col-sm-10">
+                        <input type="password" class="form-control" asp-for="Password" placeholder="Password" />
                     </div>
                 </div>
                 <button type="submit" class="btn btn-success px-4 my-4">Submit</button>

@@ -9,6 +9,7 @@ namespace Warhammer_40k_Administratum.Models
 {
     public class User
     {
+
         public int? Id { get; set; }
 
         [Required(ErrorMessage = "Please enter your Email address")]
